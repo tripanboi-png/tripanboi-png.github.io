@@ -1,3 +1,4 @@
+/* Reset dan font */
 * {
   margin: 0;
   padding: 0;
@@ -11,41 +12,56 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 1.5s ease;
   color: white;
-  animation: moveBg 10s ease-in-out infinite alternate;
 }
 
+/* Efek background gerak lembut */
 @keyframes moveBg {
   from { background-position: center top; }
   to { background-position: center bottom; }
 }
 
+/* Container utama (kotak tengah) */
 .container {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   text-align: center;
   padding: 40px;
   width: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1.2s ease forwards;
 }
 
+/* Foto profil */
 .profile img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), 0 0 60px rgba(0, 170, 255, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 1), 0 0 80px rgba(0, 170, 255, 0.9);
+}
+
+/* Nama */
 .profile h2 {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
 
+/* Tombol */
 .btn {
   display: block;
   text-decoration: none;
@@ -54,26 +70,33 @@ body {
   border-radius: 8px;
   color: white;
   font-weight: 600;
-  transition: 0.3s;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
 }
 
-.discord:hover {
-  background: #5865F2;
+.btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-.whatsapp:hover {
-  background: #25D366;
-}
-
-.facebook:hover {
-  background: #1877F2;
-}
-
+/* Footer */
 footer {
   margin-top: 25px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Efek animasi */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
