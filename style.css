@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url('https://r4.wallpaperflare.com/wallpaper/573/207/715/anime-demon-slayer-kimetsu-no-yaiba-giyu-tomioka-hd-wallpaper-d707da76d705510b46a4d4e016f4760e.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  backdrop-filter: blur(10px);
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+}
+
+.profile h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.discord {
+  background: #5865F2;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.facebook {
+  background: #1877F2;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+footer {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #ccc;
+}
+body {
+  animation: moveBg 10s ease-in-out infinite alternate;
+}
+
+@keyframes moveBg {
+  from { background-position: center top; }
+  to { background-position: center bottom; }
+}
