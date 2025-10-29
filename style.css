@@ -12,8 +12,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 1.5s ease;
   color: white;
+
+  /* efek gerak halus + fade in */
+  animation: moveBg 25s ease-in-out infinite alternate, fadeIn 1.5s ease;
+  background-position: left center;
+  background-size: cover;
+}
+
 }
 
 /* Efek background gerak lembut */
@@ -90,12 +96,12 @@ footer {
 }
 
 /* Efek animasi */
-@keyframes slideUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
+@keyframes moveBg {
+  0% { background-position: left center; }
+  100% { background-position: right center; }
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes moveBg {
+  0% { background-position: left center; }
+  100% { background-position: right center; }
 }
