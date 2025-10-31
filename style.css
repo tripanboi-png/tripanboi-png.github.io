@@ -138,6 +138,12 @@ footer {
     transform: scale(1.03);
   }
 }
+.btn i {
+  margin-right: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
 
 
 
