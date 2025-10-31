@@ -60,11 +60,18 @@ body {
 
 /* Nama */
 .profile h2 {
-  color: rgba(255, 255, 255, 0.95);
-  font-weight: 600;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 26px;
+  color: #00e0ff;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 8px #00e0ff, 
+    0 0 16px #00e0ff, 
+    0 0 32px #00e0ff;
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
+
 
 /* Tombol */
 .btn {
@@ -105,3 +112,4 @@ footer {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
