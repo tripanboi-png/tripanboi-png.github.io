@@ -64,15 +64,21 @@ body {
   font-size: 36px;
   color: #ffffff;
   letter-spacing: 2px;
-  text-shadow:
-    0 0 10px #00e6ff,
-    0 0 20px #00e6ff,
-    0 0 40px #0099ff,
-    0 0 80px #0077ff;
-  animation: glowPulse 2s ease-in-out infinite alternate;
   margin-bottom: 20px;
-}
 
+  /* Tambah outline hitam biar kebaca */
+  -webkit-text-stroke: 1px #000000;
+  text-stroke: 1px #000000;
+
+  /* Glow lembut (lebih sedikit dari sebelumnya) */
+  text-shadow:
+    0 0 8px #00ccff,
+    0 0 16px #00aaff,
+    0 0 24px #0088ff,
+    0 0 48px #0077ff;
+
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
 
 /* Tombol */
 .btn {
@@ -132,5 +138,6 @@ footer {
     transform: scale(1.03);
   }
 }
+
 
 
